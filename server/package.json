@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "bun run src/server.ts",
+    "dev": "bun --watch run src/server.ts",
+    "test": "bun test",
+    "migration:generate": "typeorm-ts-node-commonjs migration:generate",
+    "migration:run": "typeorm-ts-node-commonjs migration:run"
+  },
+  "devDependencies": {
+    "@hono/zod-openapi": "^0.19.8",
+    "@types/bcrypt": "^5.0.2",
+    "@types/bun": "latest",
+    "@types/pg": "^8.15.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@hono/swagger-ui": "^0.5.1",
+    "@hono/zod-validator": "^0.7.0",
+    "@nestjs/swagger": "^11.2.0",
+    "bcrypt": "^6.0.0",
+    "hono": "^4.7.11",
+    "pg": "^8.16.0",
+    "reflect-metadata": "^0.2.2",
+    "tsyringe": "^4.10.0",
+    "typedi": "^0.10.0",
+    "typeorm": "^0.3.24",
+    "zod": "^3.25.56"
+  }
+}
